@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Veritabanı bağlantı ayarları -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/DuyuruSistemi</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password" />
+		<property name="hibernate.connection.characterEncoding">ISO-8859-1</property>
+
+		<!-- SQL cümlecikleri oluşturma işlemi burada yapılır -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- Bütün sql sorguları consola yazılsın -->
+		<property name="show_sql">false</property>
+
+		<!-- Bağlantı havuzunda halihazırda tutulan bağlantı sayısı -->
+		<property name="hibernate.connection.pool_size">5</property>
+		
+		<!-- 	Mapping Yapılan Sınıflarımız -->
+		
+		<mapping class="com.dCandan.DuyuruSistemi.Model.tbolum"/>
+		<mapping class="com.dCandan.DuyuruSistemi.Model.tduyuru_bilgi"/>
+		<mapping class="com.dCandan.DuyuruSistemi.Model.tduyuru_icerik"/>
+		<mapping class="com.dCandan.DuyuruSistemi.Model.tduyuru_tur"/>
+		<mapping class="com.dCandan.DuyuruSistemi.Model.tfakulte"/>
+		<mapping class="com.dCandan.DuyuruSistemi.Model.treklam"/>
+		<mapping class="com.dCandan.DuyuruSistemi.Model.tuser_bilgi"/>
+		<mapping class="com.dCandan.DuyuruSistemi.Model.tuser"/>
+		<mapping class="com.dCandan.DuyuruSistemi.Model.tyetki"/>
+
+	</session-factory>
+</hibernate-configuration>
